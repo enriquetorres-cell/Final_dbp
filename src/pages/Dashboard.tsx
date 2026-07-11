@@ -8,7 +8,7 @@ interface Item {
   sku: string;
   precio: number;
   stock: number;
-  Badge: string;
+  badge: string;
 }
 
 export default function Dashboard() {
