@@ -5,7 +5,7 @@ import { apiFetch, ApiError } from "../api/client";
 interface Item {
   id: number;
   nombre: string;
-  sku: string;
+  Categoria: string;
   precio: number;
   stock: number;
   badge: string;
@@ -66,9 +66,9 @@ export default function Dashboard() {
           {items.map((it) => (
             <div key={it.id} className="border rounded-lg p-4 shadow-sm">
               <h2 className="font-semibold">{it.nombre}</h2>
-              <p className="text-sm text-gray-600">{it.sku}</p>
+              <p className="text-sm text-gray-600">{it.Categoria}</p>
               <p>S/ {it.precio} - Stock: {it.stock}</p>
-              <span className="inline-block mt-2 px-2 py-1 text-xs rounded bg-blue-100">{it.Badge}</span>
+              <span className="inline-block mt-2 px-2 py-1 text-xs rounded bg-blue-100">{it.badge}</span>
               <div className="mt-2 flex gap-2">
                 <Link to={"/products/" + it.id} className="bg-yellow-500 text-white px-3 py-1 rounded">Editar</Link>
                 <button onClick={() => handleDelete(it.id)} className="bg-red-600 text-white px-3 py-1 rounded">Eliminar</button>
