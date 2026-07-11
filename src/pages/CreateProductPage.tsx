@@ -9,20 +9,6 @@ export default function CreateProductPage() {
   const navigate = useNavigate();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   function onChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
